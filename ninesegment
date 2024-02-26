@@ -1,0 +1,130 @@
+ibredda=5;
+ihogda=4;
+
+traseg=
+[[7,-12,0],[1.5,11,0],[-5,5.5,0],
+[3.2,5.0,0],[6.5,5.5,0],[0,0,0],
+[-6,-6,0],[-2,-5.5,0],[4.5,-6,0],[-1.5,-12,0]];
+rotseg=[[0,0,0],[0,0,0],[0,0,80],
+[0,0,60],[0,0,80],[0,0,0],
+[0,0,80],[0,0,60],[0,0,80],[0,0,0]];
+
+for (i=[0:1:9]){
+    for (j=[10:10:40]){
+translate([i*30,j*-3,0])digi(i+j);
+}
+}
+//color("black")
+//scale([0.6, 0.5, 0.01])
+//translate([-160,40,0])surface("nisegmentBokstaver.png",center=true);
+//color("white")
+//translate([-110,20,0])cube([200,90,1],center=true);
+module digi(tall){    
+    en=[4,8,3,4,4,4,4,4,4,4,4];
+    to=[1,4,5,6,1,9,1,1,1,1,1];
+    tre=[1,3,5,8,1,9,1,1,1,1,1];
+    fire=[2,4,5,8,2,2,2,2,2,2,2];
+    fem=[1,2,5,8,1,9,1,1,1,1,1];
+    seks=[2,1,5,6,2,9,2,2,2,8,8];
+    sju=[1,3,3,3,3,3,7,7,7,7,7];
+    atte=[1,2,4,5,6,8,9,1,1,1,1];
+    ni=[1,2,4,5,8,9,1,1,1,1,1];    
+    null=[1,2,4,1,6,1,8,9,3,7,1];     
+    bokstavA=[1,2,4,5,6,1,8,5,2,2,2];  
+    bokstavB=[1,2,3,5,6,1,8,5,9,2,2];  
+    bokstavC=[1,2,1,1,6,1,1,1,9,2,2];  
+    bokstavD=[1,2,1,1,6,1,1,1,3,7,2];  
+    bokstavE=[1,2,9,5,6,1,1,5,2,2,2];  
+    bokstavF=[1,2,1,5,6,1,1,5,2,2,2];  
+    bokstavG=[1,2,1,1,6,1,1,1,9,2,8];  
+    bokstavH=[2,2,4,5,6,2,8,5,2,2,2]; 
+    bokstavI=[4,4,4,4,4,8,8,8,8,8,8]; 
+    bokstavJ=[8,8,4,8,8,8,8,9,6,6,6]; 
+    bokstavK=[2,2,2,5,3,2,6,5,8,2,2]; 
+    bokstavL=[2,2,6,6,6,2,9,9,9,2,2]; 
+    bokstavM=[2,2,4,1,6,2,8,3,2,2,2]; 
+    bokstavN=[2,2,4,1,6,2,8,2,2,2,2]; 
+    bokstavO=[2,2,4,9,6,2,8,1,2,2,2]; 
+    bokstavP=[2,2,4,5,6,2,1,5,2,2,2];
+    bokstavQ=[2,2,4,9,6,2,8,1,7,2,2];
+    bokstavR=[2,2,3,5,6,2,1,5,8,2,2];
+    bokstavS=[2,2,1,8,8,9,1,5,2,2,2];
+    bokstavT=[1,1,4,3,1,2,7,2,2,2,2];
+    bokstavU=[2,2,4,6,6,2,8,9,2,2,2];
+    bokstavV=[2,2,3,3,6,6,6,7,7,7,7];
+    bokstavW=[2,2,4,4,6,8,7,9,2,2,2];
+    bokstavX=[2,2,3,5,7,8,8,5,2,2,2];
+    bokstavY=[2,2,4,5,7,2,2,2,2,2,2];
+    bokstavZ=[1,3,7,9,1,1,1,1,1,1,1];
+    bokstavAE=[3,3,8,5,6,3,4,5,5,5,5];
+    bokstavOE=[2,2,4,9,6,2,8,1,3,2,2];
+    bokstavAA=[7,7,7,7,8,4,1,3,4,4,4];   
+    knappPunkt=[0,0,0,0,0,0,0,0,0,0,0];
+    knappAnt=[2,2,6,5,3,2,2,2,2,2,2];    
+    knappBac=[3,5,5,5,5,5,5,5,5,5,5];
+    knappShift=[5,5,5,5,5,5,1,5,9,9,9];
+    for(i=[0:1:10]){
+        
+if (tall ==0){seg(null[i]);}
+else if (tall ==1){seg(en[i]);}
+else if (tall ==2){seg(to[i]);}
+else if (tall ==3){seg(tre[i]);}
+else if (tall ==4){seg(fire[i]);}
+else if (tall ==5){seg(fem[i]);}
+else if (tall ==6){seg(seks[i]);}
+else if (tall ==7){seg(sju[i]);}
+else if (tall ==8){seg(atte[i]);}
+else if (tall ==9){seg(ni[i]);}
+else if (tall ==10){seg(bokstavA[i]);}
+else if (tall ==11){seg(bokstavB[i]);}
+else if (tall ==12){seg(bokstavC[i]);}
+else if (tall ==13){seg(bokstavD[i]);}
+else if (tall ==14){seg(bokstavE[i]);}
+else if (tall ==15){seg(bokstavF[i]);}
+else if (tall ==16){seg(bokstavG[i]);}
+else if (tall ==17){seg(bokstavH[i]);}
+else if (tall ==18){seg(bokstavI[i]);}
+else if (tall ==19){seg(bokstavJ[i]);}
+else if (tall ==20){seg(bokstavK[i]);}
+else if (tall ==21){seg(bokstavL[i]);}
+else if (tall ==22){seg(bokstavM[i]);}
+else if (tall ==23){seg(bokstavN[i]);}
+else if (tall ==24){seg(bokstavO[i]);}
+else if (tall ==25){seg(bokstavP[i]);}
+else if (tall ==26){seg(bokstavQ[i]);}
+else if (tall ==27){seg(bokstavR[i]);}
+else if (tall ==28){seg(bokstavS[i]);}
+else if (tall ==29){seg(bokstavT[i]);}
+else if (tall ==30){seg(bokstavU[i]);}
+else if (tall ==31){seg(bokstavV[i]);}
+else if (tall ==32){seg(bokstavW[i]);}
+else if (tall ==33){seg(bokstavX[i]);}
+else if (tall ==34){seg(bokstavY[i]);}
+else if (tall ==35){seg(bokstavZ[i]);}
+else if (tall ==36){seg(bokstavAE[i]);}
+else if (tall ==37){seg(bokstavOE[i]);}
+else if (tall ==38){seg(bokstavAA[i]);}
+else if (tall ==39){seg(knappPunkt[i]);}
+else if (tall ==40){seg(knappAnt[i]);}
+else if (tall ==41){seg(knappBac[i]);}
+else if (tall ==42){seg(knappShift[i]);}
+}
+}
+module seg(segnr){   
+translate([traseg[segnr][0],traseg[segnr][1],traseg[segnr][2]]){
+rotate([rotseg[segnr][0],rotseg[segnr][1],rotseg[segnr][2]]){
+ //LED();
+ if(segnr==0){strek(1);}
+ else {strek(7);}
+}
+}
+}
+module LED(){
+ color("green")square(3,center=true);   
+}
+module strek(len){
+   minkowski(){
+      square([len,0.5],center=true);
+       rotate(41)square(2.5,center=true);      
+   } 
+}
